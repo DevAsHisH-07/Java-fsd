@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Budget Calculator</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="budgetCalculator.js" defer></script>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="mb-4">Team Budget Calculator</h1>
+
+    <form id="dealForm">
+      <div class="form-row">
+        <div class="col-8">
+          <input type="text" class="form-control" id="dealName" placeholder="Deal Name" required>
+        </div>
+        <div class="col-2">
+          <input type="number" class="form-control" id="expense" placeholder="Expense ($)" required>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-primary btn-block" onclick="addDeal()">Add Deal</button>
+        </div>
+      </div>
+    </form>
+
+    <h2 class="mt-4">Deals List</h2>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Deal Name</th>
+          <th scope="col">Expense</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="dealTableBody"></tbody>
+    </table>
+
+    <h2 class="mt-4">Annual Budget</h2>
+    <p id="annualBudget">Total Budget: $0</p>
+  </div>
+</body>
+</html>
